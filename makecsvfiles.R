@@ -18,7 +18,7 @@ if (max(yA)){
   yART[,3]<-t(dat[yA,]$`Q14#1_1_3`)
   id<-dat[yA,]$`Q3`
   yARTd<-data.frame(yART)
-  yARTd[yARTd>100]<-yARTd[yARTd>100]/1000
+  #yARTd[yARTd>100]<-yARTd[yARTd>100]/1000
   colnames(yARTd)<-cny
   yACOR<-matrix(NA,nrow=sum(yA), ncol=3)
   yACOR[,1]<-t(dat[yA,]$`Q14#2_1_1`)
@@ -36,7 +36,7 @@ if (max(yB)){
   yBRT[,3]<-t(dat[yB,]$`Q14#1_1_3`)
   id<-dat[yB,]$`Q3`
   yRTd<-data.frame(yBRT)
-  yBRTd[yARTd>100]<-yBRTd[yBRTd>100]/1000
+  #yBRTd[yARTd>100]<-yBRTd[yBRTd>100]/1000
   colnames(yBRTd)<-cny
   yBCOR<-matrix(NA,nrow=sum(yB), ncol=3)
   yBCOR[,1]<-t(dat[yB,]$`Q14#2_1_1`)
@@ -57,7 +57,7 @@ if (max(hA)){
   hART[,6]<-t(dat[hA,]$`Q15#1_2_3`)
   id<-dat[hA,]$`Q3`
   hARTd<-data.frame(hART)
-  hARTd[hARTd>100]<-hARTd[hARTd>100]/1000
+  #hARTd[hARTd>100]<-hARTd[hARTd>100]/1000
   colnames(hARTd)<-cnh
   hACOR<-matrix(NA,nrow=sum(hA), ncol=6)
   hACOR[,1]<-t(dat[hA,]$`Q15#2_1_1`)
@@ -67,7 +67,7 @@ if (max(hA)){
   hACOR[,5]<-t(dat[hA,]$`Q15#2_2_2`)
   hACOR[,6]<-t(dat[hA,]$`Q15#2_2_3`)
   hACORd<-data.frame(hACOR)
-  colnames(hACORd)<-cn
+  colnames(hACORd)<-cnh
   write.csv(cbind(id,hARTd,hACORd),row.names=F,file=paste(Sys.Date(),'GroupA_Hon.csv',sep=''))
 }
 
@@ -81,7 +81,7 @@ if (max(hB)){
   hBRT[,6]<-t(dat[hB,]$`Q15#1_2_3`)
   id<-dat[hB,]$`Q3`
   hBRTd<-data.frame(hBRT)
-  hBRTd[hBRTd>100]<-hBRTd[hBRTd>100]/1000
+  #hBRTd[hBRTd>100]<-hBRTd[hBRTd>100]/1000
   colnames(hBRTd)<-cnh
   hBCOR<-matrix(NA,nrow=sum(hB), ncol=6)
   hBCOR[,1]<-t(dat[hB,]$`Q15#2_1_1`)
