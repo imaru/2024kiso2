@@ -35,7 +35,7 @@ if (max(yB)){
   yBRT[,2]<-t(dat[yB,]$`Q14#1_1_2`)
   yBRT[,3]<-t(dat[yB,]$`Q14#1_1_3`)
   id<-dat[yB,]$`Q3`
-  yRTd<-data.frame(yBRT)
+  yBRTd<-data.frame(yBRT)
   #yBRTd[yARTd>100]<-yBRTd[yBRTd>100]/1000
   colnames(yBRTd)<-cny
   yBCOR<-matrix(NA,nrow=sum(yB), ncol=3)
